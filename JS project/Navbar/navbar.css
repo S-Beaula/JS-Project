@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.obj-width{
+    max-width: 1500px;
+    margin: auto;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: #CD5C08;
+    padding: 20px;
+}
+#navbar-brand{
+    font-size: 2.5rem;
+}
+#navbar-container{
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: #CD5C08;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 10px black;
+    align-items: center;
+    padding: 20px;
+}
+#navbar-container{
+    display: flex;
+    align-items: flex-end;
+}
+#signupBtn,#loginBtn{
+    background-color: #C1D8C3;
+    padding: 7px 15px;
+    font-size: large;
+    border-radius: 5px;
+    
+}
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px blueviolet;
+    color: azure;
+}
+
+
+
