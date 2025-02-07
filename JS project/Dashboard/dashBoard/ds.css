@@ -1,0 +1,238 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #home-container {
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: #f4f4f4;
+    padding-top: 80px;
+  }
+  
+  #navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #navbar-brand p {
+    font-size: 2.7rem;
+  }
+  
+  #navbar-brand .car-text {
+    color: #FFA500;
+  }
+  
+  #navbar-brand .rental-text {
+    color: #FFFFFF;
+    font-style: italic;
+  }
+  
+  #navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  #info {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+  }
+  
+  #info a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  #info a:hover {
+    color: #FFA500;
+    font-weight: bold;
+  }
+  
+  .car-images {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .car-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .car-images img.active {
+    opacity: 1;
+  }
+  
+  .search-container {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .search-container input {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .search-container button {
+    border: none;
+    background: #ff7b00;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-left: 10px;
+  }
+  
+  .search-container button:hover {
+    background: #e66900;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .buttons-containers button {
+    margin: 10px;
+    border: 3px solid #ff7b00;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .buttons-containers button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  #car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .car-card {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transform: scale(0.95);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .car-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .car-card h3 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .car-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .car-card button {
+    margin: 10px 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .car-card .add-to-cart {
+    background: #ffcc00;
+  }
+  
+  .car-card .buy-now {
+    background: #ff5733;
+    color: white;
+  }
+  
+  .car-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .car-card .add-to-cart:hover {
+    background: #e6b800;
+  }
+  
+  .car-card .buy-now:hover {
+    background: #e14c29;
+  }
+  
+  .buttons-containers {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  

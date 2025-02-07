@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="signup.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <a id="navbar-brand" href="#">
+            <p>
+                <i class="fa fa-car"></i> 
+                <span class="car-text">Car</span> 
+                <span class="rental-text">Rental</span>
+            </p>
+        </a>
+        <form action="" id="signup" class="animate__animated animate__backInDown">
+            <h1>SignUp</h1>
+            <label for="name">Username:</label><br>
+            <input type="text" placeholder="Name" id="name">
+            <p id="nameerror"></p>
+            <label for="email">User Email:</label><br>
+            <input type="email" placeholder="Email address" id="email">
+            <p id="emailerror"></p>
+            <label for="password">Password:</label><br>
+            <input type="password" placeholder="Password" id="password">
+            <p id="passworderror"></p>
+            <label for="confirmpassword">Re-enter Password</label><br>
+            <input type="password" placeholder="Confirm Password" id="confirmpassword">
+            <p id="cwpderror"></p>
+            <button type="submit">SignUp</button>
+        </form>
+    </center>
+<script type="module" src="signup.js"></script>
+</body>
+</html>

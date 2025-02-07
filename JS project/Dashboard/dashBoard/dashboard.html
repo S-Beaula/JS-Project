@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-storage.js"></script>
+</head>
+
+<body>
+  <div id="home-container">
+    <div id="navbar-container">
+      <div id="navbar">
+        <a id="navbar-brand" href="#">
+          <p>
+            <i class="fa fa-car"></i>
+            <span class="car-text">Car</span>
+            <span class="rental-text">Rental</span>
+          </p>
+        </a>
+        <div id="info">
+          <a href="#">Home</a>
+          <a href="#">Categories</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="car-images">
+      <img src="https://media.ed.edmunds-media.com/tesla/model-s/2016/ns/2016_tesla_model-s_f34_ns_61716_1600.jpg" class="active" alt="Car 1">
+      <img src="https://static2.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/Discontinued-Toyota.jpg" alt="Car 2">
+      <img src="https://st.automobilemag.com/uploads/sites/11/2017/12/Shelby-GT-500CR-front-three-quarter-01.jpg" alt="Car 3">
+      <img src="https://www.motorbiscuit.com/wp-content/uploads/2019/06/2017_Honda_CR_V_073.jpg" alt="Car 4">
+      <img src="http://s1.cdn.autoevolution.com/images/gallery/BMW-i8-4997_28.jpg" alt="Car 5">
+      <img src="https://i1.wp.com/www.wheels-alive.co.uk/wp-content/uploads/2017/10/Kia-Stonic-side-front-static-view.jpg?ssl=1" alt="Car 6">
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search cars..." />
+        <button class="search-btn"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>"Find Your Perfect Ride – Choose from Compact, Economy, and Luxury Cars at the Best Prices!"</h1>
+      <div class="buttons-containers">
+        <button id="all-btn">All Cars</button>
+        <button id="compact-btn">Compact</button>
+        <button id="economy-btn">Economy</button>
+        <button id="luxury-btn">Luxury</button>
+        <div id="car-container"></div>
+      </div>
+    </div>
+  
+  </div>
+
+  <script type="module" src="dashboard.js"></script>
+
+</body>
+
+
+</html>
