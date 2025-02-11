@@ -1,30 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="booknow.css">
+</head>
+<body>
+    <div class="booking-container animate__animated animate__fadeIn">
+        <h1 id="car-name">Car Name</h1>
+        <img id="car-image" src="" alt="Car Image">
+        <p><strong>Price per Day:</strong> <span id="car-price">$0</span></p>
+
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date">
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date">
+
+        <p><strong>Total Price:</strong> <span id="total-price">$0</span></p>
+
+        <button id="calculate-price">Calculate Price</button>
+        <button id="pay">Pay</button>
+        <br>
+        <a href="../../Dashboard/dashBoard/dashboard.html">Go Back</a>
+    </div>
+
+    <script type="module" src="booknow.js"></script>
+
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Booking</title>
+    <title>Book Now</title>
     <link rel="stylesheet" href="booknow.css">
 </head>
 <body>
-    <div class="booking-container">
+    <div class="booking-container animate__animated animate__fadeIn">
         <h1 id="car-name">Car Name</h1>
+        <img id="car-image" src="default-car.jpg" alt="Car Image" width="300px">
         <p><strong>Price per Day:</strong> <span id="car-price">$0</span></p>
-        
+
         <label for="start-date">Start Date:</label>
         <input type="date" id="start-date">
-        
+
         <label for="end-date">End Date:</label>
         <input type="date" id="end-date">
-        
+
         <p><strong>Total Price:</strong> <span id="total-price">$0</span></p>
-        
+
         <button id="calculate-price">Calculate Price</button>
         <button id="pay">Pay</button>
+
+        <div id="booking-status"></div>
+
         <br>
-        <a href="index.html">Go Back</a>
+        <a href="../../Dashboard/dashBoard/dashboard.html">Go Back</a>
     </div>
 
-    <script src="booknow.js"></script>
+    <script type="module" src="booknow.js"></script>
 </body>
 </html>
+
+

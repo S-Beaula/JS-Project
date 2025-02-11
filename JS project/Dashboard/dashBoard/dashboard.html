@@ -28,10 +28,10 @@
           </p>
         </a>
         <div id="info">
-          <a href="#">Home</a>
-          <a href="#">Categories</a>
+          <a href="#" onclick="document.querySelector('.car-images').scrollIntoView({ behavior: 'smooth' })">Home</a>
+<a href="#" onclick="document.querySelector('#car-container').scrollIntoView({ behavior: 'smooth' })">Categories</a>
           <a href="#">Contact Us</a>
-          <a href="#">About</a>
+          <a id="about-link"href="#">About</a>
         </div>
       </div>
     </div>
@@ -50,21 +50,42 @@
     </div>
 
     <div class="container">
-      <h1>"Find Your Perfect Ride – Choose from Compact, Economy, and Luxury Cars at the Best Prices!"</h1>
+      <h1>Find Your Perfect Ride – Choose from Compact, Economy, and Luxury Cars at the Best Prices!</h1>
       <div class="buttons-containers">
-        <button id="all-btn">All Cars</button>
-        <button id="compact-btn">Compact</button>
-        <button id="economy-btn">Economy</button>
-        <button id="luxury-btn">Luxury</button>
-        <div id="car-container"></div>
+          <button id="all-btn">All Cars</button>
+          <button id="compact-btn">Compact</button>
+          <button id="economy-btn">Economy</button>
+          <button id="luxury-btn">Luxury</button>
       </div>
-    </div>
-  
+      <div id="car-container" class="car-container"></div>
   </div>
+ 
+</div>
+<div id="about-section" class="animate__animated animate__fadeInUp">
+  <h2>About Us</h2>
+  <p>Welcome to Car Rental! We offer the best cars at the most competitive prices. Whether you need a compact car, an economy option, or a luxury vehicle, we have you covered. Experience the best car rental service with us!</p>
 
-  <script type="module" src="dashboard.js"></script>
+<div id="reviews-section">
+<h2>What Our Customers Say</h2>
+<div class="review-card">
+  <img src="https://tse3.mm.bing.net/th?id=OIP.s1VSWpR3ulqNwZ9imX95WQHaOQ&pid=Api&P=0&h=180" alt="User 1">
+  <h3>Jane Doe</h3>
+  <p>"Great car rental service! Affordable and reliable."</p>
+  <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+</div>
+<div class="review-card">
+  <img src="https://tse1.mm.bing.net/th?id=OIP.PoSJIiqvHj9bFWYlWLNE7AHaHa&pid=Api&P=0&h=180" alt="User 2">
+  <h3>John Smith</h3>
+  <p>"Excellent customer support and high-quality cars."</p>
+  <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+</div>
+</div>
+</div>
+<script type="module" src="dashboard.js"></script>
 
 </body>
 
 
 </html>
+
+

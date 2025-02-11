@@ -97,3 +97,65 @@ button:hover {
     color: white; 
     font-weight: bold;
   }
+  @media (max-width: 400px) {
+    #signup {
+        width: 90%;
+        padding: 20px;
+    }
+    #navbar-brand {
+        font-size: 2rem;
+        /* height: fit-content; */
+       bottom: 30%;
+    }
+    label {
+        font-size: 1.2rem;
+    }
+    input {
+        padding: 8px;
+        font-size: 1rem;
+    }
+    button {
+        padding: 8px 50px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 401px - 768px (Tablets) */
+@media (min-width: 401px) and (max-width: 768px) {
+    #signup {
+        width: 70%;
+        padding: 30px;
+    }
+    #navbar-brand {
+        font-size: 2.3rem;
+    }
+    label {
+        font-size: 1.3rem;
+    }
+    input {
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+    button {
+        padding: 10px 60px;
+        font-size: 1rem;
+    }
+}
+
+/* 769px - 1024px (Laptops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #signup {
+        width: 50%;
+        padding: 35px;
+    }
+    #navbar-brand {
+        font-size: 2.5rem;
+    }
+}
+
+/* 1025px - 1440px (Large Screens) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #signup {
+        width: 35%;
+    }
+}
