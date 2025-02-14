@@ -25,7 +25,6 @@ signup.addEventListener("submit", async (e) => {
 
     let isValid = true;
 
-    // Validate Name
     if (name === "") {
         document.getElementById("nameerror").textContent = "Name required";
         isValid = false;
@@ -36,7 +35,6 @@ signup.addEventListener("submit", async (e) => {
         document.getElementById("nameerror").textContent = "";
     }
 
-    // Validate Email
     const emailpattern =
         /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
     if (email === "") {

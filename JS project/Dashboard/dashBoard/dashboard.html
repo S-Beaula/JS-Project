@@ -5,15 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Rental</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
   <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-storage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+    integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -29,20 +31,26 @@
         </a>
         <div id="info">
           <a href="#" onclick="document.querySelector('.car-images').scrollIntoView({ behavior: 'smooth' })">Home</a>
-<a href="#" onclick="document.querySelector('#car-container').scrollIntoView({ behavior: 'smooth' })">Categories</a>
-          <a href="#">Contact Us</a>
-          <a id="about-link"href="#">About</a>
+          <a href="#"
+            onclick="document.querySelector('#car-container').scrollIntoView({ behavior: 'smooth' })">Categories</a>
+          <a href="#" id="contact">Contact Us</a>
+          <a id="about-link" href="../About/about.html">About</a>
         </div>
       </div>
     </div>
 
     <div class="car-images">
-      <img src="https://media.ed.edmunds-media.com/tesla/model-s/2016/ns/2016_tesla_model-s_f34_ns_61716_1600.jpg" class="active" alt="Car 1">
-      <img src="https://static2.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/Discontinued-Toyota.jpg" alt="Car 2">
-      <img src="https://st.automobilemag.com/uploads/sites/11/2017/12/Shelby-GT-500CR-front-three-quarter-01.jpg" alt="Car 3">
+      <img src="https://media.ed.edmunds-media.com/tesla/model-s/2016/ns/2016_tesla_model-s_f34_ns_61716_1600.jpg"
+        class="active" alt="Car 1">
+      <img src="https://static2.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/Discontinued-Toyota.jpg"
+        alt="Car 2">
+      <img src="https://st.automobilemag.com/uploads/sites/11/2017/12/Shelby-GT-500CR-front-three-quarter-01.jpg"
+        alt="Car 3">
       <img src="https://www.motorbiscuit.com/wp-content/uploads/2019/06/2017_Honda_CR_V_073.jpg" alt="Car 4">
       <img src="http://s1.cdn.autoevolution.com/images/gallery/BMW-i8-4997_28.jpg" alt="Car 5">
-      <img src="https://i1.wp.com/www.wheels-alive.co.uk/wp-content/uploads/2017/10/Kia-Stonic-side-front-static-view.jpg?ssl=1" alt="Car 6">
+      <img
+        src="https://i1.wp.com/www.wheels-alive.co.uk/wp-content/uploads/2017/10/Kia-Stonic-side-front-static-view.jpg?ssl=1"
+        alt="Car 6">
       <div class="search-container">
         <input type="text" id="search" placeholder="Search cars..." />
         <button class="search-btn"><i class="fa fa-search"></i></button>
@@ -52,40 +60,62 @@
     <div class="container">
       <h1>Find Your Perfect Ride – Choose from Compact, Economy, and Luxury Cars at the Best Prices!</h1>
       <div class="buttons-containers">
-          <button id="all-btn">All Cars</button>
-          <button id="compact-btn">Compact</button>
-          <button id="economy-btn">Economy</button>
-          <button id="luxury-btn">Luxury</button>
+        <button id="all-btn">All Cars</button>
+        <button id="compact-btn">Compact</button>
+        <button id="economy-btn">Economy</button>
+        <button id="luxury-btn">Luxury</button>
       </div>
       <div id="car-container" class="car-container"></div>
-  </div>
- 
-</div>
-<div id="about-section" class="animate__animated animate__fadeInUp">
-  <h2>About Us</h2>
-  <p>Welcome to Car Rental! We offer the best cars at the most competitive prices. Whether you need a compact car, an economy option, or a luxury vehicle, we have you covered. Experience the best car rental service with us!</p>
+    </div>
 
-<div id="reviews-section">
-<h2>What Our Customers Say</h2>
-<div class="review-card">
-  <img src="https://tse3.mm.bing.net/th?id=OIP.s1VSWpR3ulqNwZ9imX95WQHaOQ&pid=Api&P=0&h=180" alt="User 1">
-  <h3>Jane Doe</h3>
-  <p>"Great car rental service! Affordable and reliable."</p>
-  <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-</div>
-<div class="review-card">
-  <img src="https://tse1.mm.bing.net/th?id=OIP.PoSJIiqvHj9bFWYlWLNE7AHaHa&pid=Api&P=0&h=180" alt="User 2">
-  <h3>John Smith</h3>
-  <p>"Excellent customer support and high-quality cars."</p>
-  <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-</div>
-</div>
-</div>
-<script type="module" src="dashboard.js"></script>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Car Rental</h3>
+        <p>Your trusted car rental service. We offer the best cars at the best prices.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="../About/about.html">About</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="../Contact/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><i class="fa fa-envelope"></i> info@carrental.com</p>
+        <p><i class="fa fa-phone"></i> +1 234 567 890</p>
+        <p><i class="fa fa-map-marker"></i> 1234 Car Street, City, Country</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Car Rental. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+  <script type="module" src="dashboard.js"></script>
 
 </body>
 
 
 </html>
-
-
