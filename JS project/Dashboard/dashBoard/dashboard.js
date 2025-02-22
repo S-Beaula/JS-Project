@@ -15,6 +15,34 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const carContainer = document.getElementById("car-container");
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger-menu");
+    const menu = document.createElement("div");
+  
+    // Create Mobile Menu
+    menu.classList.add("mobile-menu");
+    menu.innerHTML = `
+      <a href="#" onclick="document.querySelector('.car-images').scrollIntoView({ behavior: 'smooth' })">Home</a>
+          <a href="#"
+            onclick="document.querySelector('#car-container').scrollIntoView({ behavior: 'smooth' })">Categories</a>
+          <a href="../Contact/contact.html" id="contact">Contact Us</a>
+          <a id="about-link" href="../About/about.html">About</a>
+    `;
+    document.body.appendChild(menu);
+  
+    // Toggle Menu on Click
+    hamburger.addEventListener("click", function () {
+      menu.classList.toggle("show");
+    });
+  
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  });
+  
 
 function displayCars(cars, category, searchQuery) {
     carContainer.innerHTML = "";
@@ -80,7 +108,15 @@ async function fetchCars(category = "All", searchQuery = "") {
         console.error("Error fetching cars:", error);
     }
 }
-
+// document.getElementById("hamburger-menu").addEventListener("click", function () {
+//     const navLinks = document.getElementById("info");
+//     if (navLinks.style.display === "flex") {
+//       navLinks.style.display = "none";
+//     } else {
+//       navLinks.style.display = "flex";
+//     }
+//   });
+  
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("search").addEventListener("input", function () {
         fetchCars("All", this.value.toLowerCase());

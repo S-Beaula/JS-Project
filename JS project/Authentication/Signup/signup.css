@@ -122,9 +122,13 @@ button:hover {
 
 /* 401px - 768px (Tablets) */
 @media (min-width: 401px) and (max-width: 768px) {
+    body{
+        height: 100vh;
+    }
     #signup {
         width: 70%;
         padding: 30px;
+
     }
     #navbar-brand {
         font-size: 2.3rem;
@@ -142,7 +146,6 @@ button:hover {
     }
 }
 
-/* 769px - 1024px (Laptops) */
 @media (min-width: 769px) and (max-width: 1024px) {
     #signup {
         width: 50%;
@@ -153,7 +156,6 @@ button:hover {
     }
 }
 
-/* 1025px - 1440px (Large Screens) */
 @media (min-width: 1025px) and (max-width: 1440px) {
     #signup {
         width: 35%;
