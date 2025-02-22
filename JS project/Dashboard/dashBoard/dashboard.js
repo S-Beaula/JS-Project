@@ -18,8 +18,7 @@ const carContainer = document.getElementById("car-container");
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger-menu");
     const menu = document.createElement("div");
-  
-    // Create Mobile Menu
+
     menu.classList.add("mobile-menu");
     menu.innerHTML = `
       <a href="#" onclick="document.querySelector('.car-images').scrollIntoView({ behavior: 'smooth' })">Home</a>
@@ -29,27 +28,25 @@ document.addEventListener("DOMContentLoaded", function () {
           <a id="about-link" href="../About/about.html">About</a>
     `;
     document.body.appendChild(menu);
-  
-    // Toggle Menu on Click
+
     hamburger.addEventListener("click", function () {
-      menu.classList.toggle("show");
+        menu.classList.toggle("show");
     });
-  
-    // Close menu when clicking outside
+
     document.addEventListener("click", function (e) {
-      if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.remove("show");
-      }
+        if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove("show");
+        }
     });
-  });
-  
+});
+
 
 function displayCars(cars, category, searchQuery) {
     carContainer.innerHTML = "";
     Object.values(cars).forEach(car => {
         if ((category === "All" || car.Category.toLowerCase() === category.toLowerCase()) &&
             (searchQuery === "" || car.Carname.toLowerCase().includes(searchQuery.toLowerCase()))) {
-            
+
             const card = document.createElement("div");
             card.className = "car-card animate__animated animate__fadeInLeftBig";
             card.innerHTML = `
@@ -68,27 +65,27 @@ function displayCars(cars, category, searchQuery) {
     });
 
     document.querySelectorAll(".book-now").forEach(button => {
-     
+
         document.addEventListener("click", function (event) {
             if (event.target.classList.contains("book-now")) {
                 const carCard = event.target.closest(".car-card");
                 const priceElement = carCard.querySelector(".car-price");
-        
+
                 if (!priceElement) {
                     console.error("Price element not found in car card.");
                     return;
                 }
-        
+
                 const car = {
                     Carname: carCard.querySelector("h2").innerText,
                     Image: carCard.querySelector("img").src,
                     Price: parseFloat(priceElement.innerText.split(": ")[1]) || 0
                 };
-        
+
                 window.location.href = `../Booknow/booknow.html?name=${encodeURIComponent(car.Carname)}&image=${encodeURIComponent(car.Image)}&price=${car.Price}`;
             }
         });
-        
+
     });
 }
 
@@ -108,15 +105,8 @@ async function fetchCars(category = "All", searchQuery = "") {
         console.error("Error fetching cars:", error);
     }
 }
-// document.getElementById("hamburger-menu").addEventListener("click", function () {
-//     const navLinks = document.getElementById("info");
-//     if (navLinks.style.display === "flex") {
-//       navLinks.style.display = "none";
-//     } else {
-//       navLinks.style.display = "flex";
-//     }
-//   });
-  
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("search").addEventListener("input", function () {
         fetchCars("All", this.value.toLowerCase());
@@ -127,25 +117,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("economy-btn").addEventListener("click", () => fetchCars("Economy"));
     document.getElementById("luxury-btn").addEventListener("click", () => fetchCars("Luxury"));
 
-    fetchCars(); 
+    fetchCars();
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // Update the Contact Us link to open in a new page
     document.getElementById("contact").addEventListener("click", function (event) {
-      event.preventDefault();
-      window.location.href = "../Contact/contact.html"; // Redirect to Contact Us page
+        event.preventDefault();
+        window.location.href = "../Contact/contact.html";
     });
-  });
-  
-// document.getElementById("about").addEventListener("click", function(event) {
-//         event.preventDefault();
-//         document.getElementById("about-section").style.display = "block";
-//         document.getElementById("reviews-section").scrollIntoView({ behavior: "smooth" });
-// })
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Dashboard.js loaded");
 
-    // Highlight current page in navbar
     const currentPage = window.location.pathname.split("/").pop();
     if (currentPage === "about.html") {
         document.querySelector("#about-link").style.textDecoration = "underline";

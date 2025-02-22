@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactForm = document.getElementById("contact-form");
   
     contactForm.addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent form refresh
+      event.preventDefault(); 
   
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();

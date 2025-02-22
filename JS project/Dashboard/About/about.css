@@ -77,7 +77,6 @@
     }
 }
 
-/* Tablets & Small Screens (401px - 768px) */
 @media screen and (min-width: 401px) and (max-width: 768px) {
     #about {
         width: 85%;
@@ -95,7 +94,6 @@
     }
 }
 
-/* Medium to Large Screens (769px - 1440px) */
 @media screen and (min-width: 769px) and (max-width: 1440px) {
     #about {
         width: 70%;
@@ -111,7 +109,6 @@
     }
 }
 
-/* Extra Large Screens (1440px - 2250px) */
 @media screen and (min-width: 1440px) and (max-width: 2250px) {
     #about {
         width: 60%;
