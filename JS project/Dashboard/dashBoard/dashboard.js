@@ -1,3 +1,13 @@
+let currentIndex = 0;
+const images = document.querySelectorAll(".car-images img");
+
+function showNextImage() {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+}
+
+setInterval(showNextImage, 3000);
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
 
@@ -88,7 +98,6 @@ function displayCars(cars, category, searchQuery) {
 
     });
 }
-
 async function fetchCars(category = "All", searchQuery = "") {
     const carsRef = ref(db, "CarData");
     try {
@@ -105,8 +114,6 @@ async function fetchCars(category = "All", searchQuery = "") {
         console.error("Error fetching cars:", error);
     }
 }
-
-
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("search").addEventListener("input", function () {
         fetchCars("All", this.value.toLowerCase());
@@ -125,8 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "../Contact/contact.html";
     });
 });
-
-
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Dashboard.js loaded");
 
@@ -135,7 +140,4 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#about-link").style.textDecoration = "underline";
     }
 });
-
-
-
 fetchCars();
