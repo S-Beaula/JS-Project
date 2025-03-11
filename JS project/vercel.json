@@ -1,7 +1,11 @@
 {
-    "rewrites":[
-        {
-            "source":"/(.*)","destination":"/JS project"
-        }
+    "version": 2,
+    "builds": [
+      {
+        "src": "public/Authentication/Navbar/navbar.html",
+        "use": "@vercel/static"
+      }
     ]
-}
+  }
+  
+  
