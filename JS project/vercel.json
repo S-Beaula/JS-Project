@@ -1,0 +1,5 @@
+{
+    "rewrites": [
+      { "source": "/(.*)", "destination": "./Authentication/Navbar/navbar.html" }
+    ]
+  }

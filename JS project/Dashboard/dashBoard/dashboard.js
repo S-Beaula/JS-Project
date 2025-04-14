@@ -76,7 +76,8 @@ function displayCars(cars, category, searchQuery) {
 
     document.querySelectorAll(".book-now").forEach(button => {
 
-        document.addEventListener("click", function (event) {
+        button
+        .addEventListener("click", function (event) {
             if (event.target.classList.contains("book-now")) {
                 const carCard = event.target.closest(".car-card");
                 const priceElement = carCard.querySelector(".car-price");
